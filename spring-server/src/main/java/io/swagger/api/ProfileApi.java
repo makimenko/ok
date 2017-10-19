@@ -21,7 +21,7 @@ import org.springframework.web.multipart.MultipartFile;
 import java.util.List;
 import javax.validation.constraints.*;
 import javax.validation.Valid;
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2017-10-18T20:12:35.132Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2017-10-19T19:21:59.179Z")
 
 @Api(value = "profile", description = "the profile API")
 public interface ProfileApi {
@@ -34,5 +34,14 @@ public interface ProfileApi {
         produces = { "application/json" }, 
         method = RequestMethod.GET)
     ResponseEntity<List<Profile>> getAllProfiles();
+
+
+    @ApiOperation(value = "", notes = "", response = Void.class, tags={  })
+    @ApiResponses(value = { 
+        @ApiResponse(code = 200, message = "Make a new profile", response = Void.class) })
+    
+    @RequestMapping(value = "/profile",
+        method = RequestMethod.POST)
+    ResponseEntity<Void> profilePost(@ApiParam(value = "Create new profile" ,required=true )  @Valid @RequestBody Profile profile);
 
 }

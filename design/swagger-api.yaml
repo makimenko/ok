@@ -25,6 +25,19 @@ paths:
             type: array
             items:
               $ref: "#/definitions/Profile"
+  /profile:
+    post:
+      parameters:
+        - name: profile
+          in: body
+          description: Create new profile
+          schema:
+            $ref: '#/definitions/Profile'
+          required: true
+      responses:
+        200:
+          description: Make a new profile
+              
 definitions:
   Profile:
     type: "object"
