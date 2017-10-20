@@ -1,0 +1,1 @@
+Forked: https://github.com/maximegris/angular-electron

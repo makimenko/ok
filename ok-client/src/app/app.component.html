@@ -1,0 +1,26 @@
+<mat-sidenav-container>
+  <mat-sidenav disableClose opened=true mode="side">
+    <mat-accordion multi="false">
+        <mat-expansion-panel *ngFor="let navigationGroup of ['Group 1', 'Group 2', 'Group 3', 'Group 4', 'Group 5']">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    <mat-icon>home</mat-icon>
+                </mat-panel-title>
+                <mat-panel-description>
+                    {{navigationGroup}}
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            <mat-nav-list>
+                <mat-list-item height="45px" *ngFor="let navigationItem of ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5']">
+                    {{navigationItem}}
+                </mat-list-item>
+            </mat-nav-list>
+        </mat-expansion-panel>
+    </mat-accordion>
+  </mat-sidenav>
+
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+  
+</mat-sidenav-container>

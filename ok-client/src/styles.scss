@@ -1,0 +1,15 @@
+@import "./app/design/default-theme.scss";
+
+/**
+* This import allows to use Material Design Iconset offline.
+* See more info: http://google.github.io/material-design-icons/
+*/ 
+@import "./app/design/material-design-iconset.scss";
+
+html, body, .content, material-app, mat-sidenav-container, app-root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
